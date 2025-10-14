@@ -40,7 +40,7 @@ def random_sample_oasis_data(parsed_csv_path, output_csv_path, num_samples_per_g
 
     # Save to new CSV file
     os.makedirs(output_csv_path, exist_ok=True)
-    csv_data.to_csv(os.path.join(output_csv_path, "random_sampled_oasis_data.csv"), index=False)
+    csv_data.to_csv(os.path.join(output_csv_path, "random_sample.csv"), index=False)
 
 if __name__ == "__main__":
     random_sample_oasis_data(PARSED_CSV_PATH, OUTPUT_DIR, NUM_SAMPLES_PER_GROUP)
