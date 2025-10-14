@@ -1,3 +1,6 @@
+import os
+import pandas as pd
+
 """
 This file will take in the OASIS dataset with all patient information to separate
 cognitively normal and AD (Alzheimer's Disease) demented patients. This data
@@ -8,9 +11,6 @@ using the provided OASIS scripts.
 https://github.com/NrgXnat/oasis-scripts
 
 """
-
-import os
-import pandas as pd
 
 BASEDIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 OASIS_DATA_PATH = os.path.join(BASEDIR, "oasis-files", "OASIS3_UDSb4_cdr.csv")
