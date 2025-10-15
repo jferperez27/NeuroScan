@@ -36,13 +36,17 @@ def find_mri_files(random_sample_csv_path, oasis_data_path, output_csv_path):
         else:
             print(f"No MRI files found for subject_id: {id}")
 
-    mri_files = pd.DataFrame(mri_files)
 
+    random_sample_df["mri_file"] = mri_files
+
+    mri_files = pd.DataFrame(mri_files)
 
     # Save to new CSV file
     os.makedirs(output_csv_path, exist_ok=True)
-    output_file_path = os.path.join(output_csv_path, "oasis_data_for_scripts.csv")
-    pd.DataFrame(mri_files).to_csv(output_file_path, index=False, header=False)
+    mri_output_file_path = os.path.join(output_csv_path, "oasis_data_for_scripts.csv")
+    key_output_file_path = os.path.join(output_csv_path, "patient_mri_keys.csv")
+    pd.DataFrame(mri_files).to_csv(mri_output_file_path, index=False, header=False)
+    pd.DataFrame(random_sample_df).to_csv(key_output_file_path, index=False)
 
 if __name__ == "__main__":
     find_mri_files(RANDOM_SAMPLE_CSV_PATH, OASIS_MRI_PATH, OUTPUT_DIR)
