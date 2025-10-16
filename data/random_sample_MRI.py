@@ -50,3 +50,9 @@ def find_mri_files(random_sample_csv_path, oasis_data_path, output_csv_path):
 
 if __name__ == "__main__":
     find_mri_files(RANDOM_SAMPLE_CSV_PATH, OASIS_MRI_PATH, OUTPUT_DIR)
+    print("MRI files have been successfully matched and saved.\n")
+    print("Please use 'oasis_data_for_scripts.csv' for the OASIS retrieval scripts.\n")
+    print("Use the following format:\n")
+    print("---------------------------------------------------\n")
+    print("./download_oasis_scans_bids.sh oasis_data_for_scripts.csv <output_directory> <nitrc_ir_username> T1w\n")
+    print("---------------------------------------------------\n")
