@@ -209,3 +209,6 @@ __marimo__/
 # Sensitive Oasis Files
 /oasis-files/
 /mri-files/
+
+# Preprocessed NeuroScan Data
+/preprocessing/training_data
