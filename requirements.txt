@@ -2,3 +2,4 @@ pandas
 nibabel
 scipy
 tensorflow
+scikit-learn
