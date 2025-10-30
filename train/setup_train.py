@@ -23,7 +23,7 @@ training_files = sorted(str(p) for p in training_data_dir.glob("*.nii.gz"))
 training_key_csv = training_data_dir / "training_data_key.csv"
 
 BATCH_SIZE = 2  # Increased from 1 for more stable gradients
-EPOCHS = 2
+EPOCHS = 10
 
 SHAPE = (128, 128, 128)  # current shape for lightweight VRAM usage
 df = pd.read_csv(training_key_csv)
@@ -191,5 +191,5 @@ history = model.fit(
 )
 
 # Save the model
-model.save(basedir / "train" / "trained_model.h5")
+model.save(basedir / "train" / "trained_model.keras")
 print("Model saved to trained_model.h5")
