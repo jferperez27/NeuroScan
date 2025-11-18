@@ -212,3 +212,6 @@ __marimo__/
 
 # Preprocessed NeuroScan Data
 /preprocessing/training_data
+
+# Temp Readme file
+/README.md/
